@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBC Canubing 1, Calapan City</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.jpg" alt="Barangay Logo" class="logo">
+            <h1>Online Barangay Clearance in Canubing 1</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section class="confirmation">
+            <h2>Review Your Information</h2>
+            <ul>
+                <li><strong>Full Name:</strong> <span id="full-name"></span></li>
+                <li><strong>Age:</strong> <span id="age"></span></li>
+                <li><strong>Address:</strong> <span id="address"></span></li>
+                <li><strong>Purpose of Clearance:</strong> <span id="purpose"></span></li>
+                <li><strong>Contact Number:</strong> <span id="contact-number"></span></li>
+            </ul>
+            <button id="confirm-button">Confirm Application</button>
+            <p>Back to The Main Page. </I> <a href="index.html"> CLICK here!! </a></p>    
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Barangay Canubing 1. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('full-name').textContent = params.get('full_name');
+        document.getElementById('age').textContent = params.get('age');
+        document.getElementById('address').textContent = params.get('address');
+        document.getElementById('purpose').textContent = params.get('purpose');
+        document.getElementById('contact-number').textContent = params.get('contact_number');
+
+        // Confirm button click event
+        document.getElementById('confirm-button').addEventListener('click', function() {
+            window.location.href = 'thankyou.html'; // Redirect to the thank you page
+        });
+    </script>
+</body>
+</html>
